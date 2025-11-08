@@ -37,8 +37,8 @@ const Footer: React.FC = () => {
         <div className="mt-16 border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm">
           <p>© {new Date().getFullYear()} Stud AI. All rights reserved</p>
           <div className="flex items-center space-x-2 mt-4 sm:mt-0">
-            <p>by <a href="#" className="hover:text-white">Dream Studio</a></p>
-            <p>Made in <a href="#" className="hover:text-white">Framer</a></p>
+            <p>by <a href="#" className="hover:text-white">Taksh & Keval</a></p>
+            <p>Made in <a href="#" className="hover:text-white">Us</a></p>
           </div>
         </div>
       </div>
