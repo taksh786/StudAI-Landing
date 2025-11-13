@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <StudAILogo className="h-6 w-auto" />
-          <span className="font-space-grotesk font-bold text-lg text-white">Stud AI</span>
+          <span className="font-space-grotesk font-bold text-lg text-white">Osmiq</span>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
