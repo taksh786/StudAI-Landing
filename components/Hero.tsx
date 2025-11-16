@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { OrbitcLogo, CloudcLogo, AmsterdamLogo, FieldLogo } from './Icons';
+import CelestialSphere from './CelestialSphere';
 
 const Typewriter: React.FC<{ text: string; speed?: number }> = ({ text, speed = 70 }) => {
   const [displayText, setDisplayText] = useState('');
@@ -41,7 +42,8 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onJoinWaitlistClick }) => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 relative z-10">
+    <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 relative">
+      <CelestialSphere className="absolute inset-0 -z-10" />
       <div className="flex flex-col items-center">
         <div className="inline-block bg-gray-800/50 border border-gray-700 rounded-full px-4 py-1.5 text-xs text-gray-300 mb-6">
           THE AI LAYER THAT BRINGS
