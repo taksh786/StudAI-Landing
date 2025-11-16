@@ -57,9 +57,6 @@ const ProductFeatures: React.FC = () => {
                 {feature.title}
               </h2>
               <p className="text-gray-400 mb-8 max-w-md">{feature.description}</p>
-              <button className="border border-gray-600 text-gray-300 font-medium px-5 py-2.5 rounded-full hover:border-white hover:text-white transition-all text-sm">
-                Get started
-              </button>
             </div>
             <div className="md:w-1/2 w-full aspect-square">
               {feature.mockup}
@@ -72,4 +69,3 @@ const ProductFeatures: React.FC = () => {
 };
 
 export default ProductFeatures;
-   

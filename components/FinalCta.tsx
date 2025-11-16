@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-const FinalCta: React.FC = () => {
+interface FinalCtaProps {
+  onJoinWaitlistClick: () => void;
+}
+
+const FinalCta: React.FC<FinalCtaProps> = ({ onJoinWaitlistClick }) => {
   return (
     <section className="py-24 md:py-32 relative overflow-hidden">
        <div 
@@ -16,18 +20,12 @@ const FinalCta: React.FC = () => {
         <h2 className="font-space-grotesk text-3xl md:text-5xl font-medium text-white mb-8">
           Ready to automate everything?
         </h2>
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <button className="bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition-colors w-40 text-center">
-            Get started
-          </button>
-          <button className="border border-gray-600 text-gray-300 font-medium px-6 py-3 rounded-full hover:border-white hover:text-white transition-all w-40 text-center">
-            Learn more
-          </button>
-        </div>
+        <button onClick={onJoinWaitlistClick} className="bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition-colors w-40 text-center">
+          Join waitlist
+        </button>
       </div>
     </section>
   );
 };
 
 export default FinalCta;
-   

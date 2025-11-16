@@ -25,9 +25,6 @@ const Customers: React.FC = () => {
                     <div className="text-sm text-gray-400">ROI</div>
                 </div>
             </div>
-            <button className="mt-8 border border-gray-600 text-gray-300 font-medium px-5 py-2.5 rounded-full hover:border-white hover:text-white transition-all text-sm">
-                Get started
-              </button>
           </div>
           <div className="md:w-1/2 w-full aspect-square bg-gradient-to-br from-blue-600 to-indigo-800 rounded-3xl flex items-center justify-center p-8">
             <CloudLogo className="h-10 text-white"/>
@@ -49,9 +46,6 @@ const Customers: React.FC = () => {
                         <div className="text-sm text-gray-400">ROI</div>
                     </div>
                 </div>
-                <button className="mt-8 border border-gray-600 text-gray-300 font-medium px-5 py-2.5 rounded-full hover:border-white hover:text-white transition-all text-sm">
-                    Get started
-                </button>
             </div>
             <div className="md:w-1/2 w-full aspect-square bg-gradient-to-br from-yellow-400 to-purple-600 rounded-3xl flex items-center justify-center p-8">
                 <ProlineLogo className="h-10 text-white" />
@@ -64,4 +58,3 @@ const Customers: React.FC = () => {
 };
 
 export default Customers;
-   

@@ -1,10 +1,11 @@
-
 import React, { useState } from 'react';
 import { StudAILogo, MenuIcon, CloseIcon } from './Icons';
 
-const navItems = ['Product', 'Pricing', 'Docs', 'Company'];
+interface HeaderProps {
+  onJoinWaitlistClick: () => void;
+}
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({ onJoinWaitlistClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -15,20 +16,9 @@ const Header: React.FC = () => {
           <span className="font-space-grotesk font-bold text-lg text-white">Osmiq</span>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <a key={item} href="#" className="text-sm font-medium text-gray-300 hover:text-white transition-colors uppercase tracking-wider">
-              {item}
-            </a>
-          ))}
-        </nav>
-
-        <div className="hidden md:flex items-center space-x-4">
-          <button className="text-sm font-medium text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-full border border-gray-600 hover:border-white">
-            Sign In
-          </button>
-          <button className="text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors">
-            Get early access
+        <div className="hidden md:block">
+          <button onClick={onJoinWaitlistClick} className="text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors">
+            Join waitlist
           </button>
         </div>
 
@@ -42,16 +32,8 @@ const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-[#050505] py-4">
           <nav className="flex flex-col items-center space-y-4">
-            {navItems.map((item) => (
-              <a key={item} href="#" className="text-sm font-medium text-gray-300 hover:text-white transition-colors uppercase tracking-wider">
-                {item}
-              </a>
-            ))}
-            <button className="text-sm font-medium text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-full border border-gray-600 hover:border-white w-40">
-              Sign In
-            </button>
-            <button className="text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors w-40">
-              Get early access
+            <button onClick={() => { onJoinWaitlistClick(); setIsMenuOpen(false); }} className="text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors w-40">
+              Join waitlist
             </button>
           </nav>
         </div>
@@ -61,4 +43,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-   

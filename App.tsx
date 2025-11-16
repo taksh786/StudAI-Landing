@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Intro from './components/Intro';
@@ -7,14 +7,17 @@ import CoreInnovation from './components/CoreInnovation';
 import ProductFeatures from './components/ProductFeatures';
 import FeatureHub from './components/FeatureHub';
 import Customers from './components/Customers';
-import Integrations from './components/Integrations';
-import NextGenCarousel from './components/NextGenCarousel';
 import Quote from './components/Quote';
-import Faq from './components/Faq';
 import FinalCta from './components/FinalCta';
 import Footer from './components/Footer';
+import WaitlistModal from './components/WaitlistModal';
 
 const App: React.FC = () => {
+  const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
+
+  const openWaitlistModal = () => setIsWaitlistModalOpen(true);
+  const closeWaitlistModal = () => setIsWaitlistModalOpen(false);
+
   return (
     <div className="bg-[#050505] text-white overflow-x-hidden relative">
       <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-black/10 to-transparent z-0"></div>
@@ -27,24 +30,21 @@ const App: React.FC = () => {
         }}
       ></div>
 
-      <Header />
+      <Header onJoinWaitlistClick={openWaitlistModal} />
       <main className="relative z-10">
-        <Hero />
+        <Hero onJoinWaitlistClick={openWaitlistModal} />
         <Intro />
         <CoreInnovation />
         <ProductFeatures />
         <FeatureHub />
         <Customers />
-        <Integrations />
-        <NextGenCarousel />
         <Quote />
-        <Faq />
-        <FinalCta />
+        <FinalCta onJoinWaitlistClick={openWaitlistModal} />
       </main>
       <Footer />
+      <WaitlistModal isOpen={isWaitlistModalOpen} onClose={closeWaitlistModal} />
     </div>
   );
 };
 
 export default App;
-   

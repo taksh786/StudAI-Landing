@@ -35,7 +35,11 @@ const Typewriter: React.FC<{ text: string; speed?: number }> = ({ text, speed = 
   );
 };
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onJoinWaitlistClick: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onJoinWaitlistClick }) => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 relative z-10">
       <div className="flex flex-col items-center">
@@ -48,12 +52,9 @@ const Hero: React.FC = () => {
         <p className="mt-6 max-w-xl text-lg md:text-xl text-gray-400 font-light">
           <Typewriter text="Study smarter. Automate assessments. Save educators time." />
         </p>
-        <div className="mt-10 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <button className="bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition-colors w-48 text-center">
-            Generate a Paper
-          </button>
-          <button className="border border-gray-600 text-gray-300 font-medium px-6 py-3 rounded-full hover:border-white hover:text-white transition-all w-48 text-center">
-            See demo
+        <div className="mt-10">
+          <button onClick={onJoinWaitlistClick} className="bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition-colors w-48 text-center">
+            Join waitlist
           </button>
         </div>
         <div className="mt-24 flex flex-col items-center">
@@ -71,4 +72,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-   

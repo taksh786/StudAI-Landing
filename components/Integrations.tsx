@@ -13,9 +13,6 @@ const Integrations: React.FC = () => {
           <p className="text-gray-400 mb-8 max-w-md">
             Connect our AI with the apps you already use, including calendars, docs, messaging platforms, and more.
           </p>
-          <button className="border border-gray-600 text-gray-300 font-medium px-5 py-2.5 rounded-full hover:border-white hover:text-white transition-all text-sm">
-            Get started
-          </button>
         </div>
         <div className="md:w-1/2 w-full">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-8 text-gray-500">
@@ -32,4 +29,3 @@ const Integrations: React.FC = () => {
 };
 
 export default Integrations;
-   

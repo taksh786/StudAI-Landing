@@ -44,13 +44,10 @@ const FeatureHub: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 border-t border-r border-gray-800">
           {features.map((feature, index) => (
-            <div key={index} className="border-b border-l border-gray-800 p-8 group">
+            <div key={index} className="border-b border-l border-gray-800 p-8">
               {feature.icon}
               <h3 className="text-lg font-medium text-white mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-400 mb-4">{feature.description}</p>
-               <a href="#" className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors flex items-center">
-                Learn more <ArrowRightIcon className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-              </a>
+              <p className="text-sm text-gray-400">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -60,4 +57,3 @@ const FeatureHub: React.FC = () => {
 };
 
 export default FeatureHub;
-   

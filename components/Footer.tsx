@@ -1,44 +1,32 @@
-
 import React from 'react';
-import { StudAILogo } from './Icons';
-
-const footerLinks = {
-  Product: ['About', 'Pricing', 'Changelog', 'Contact'],
-  Legal: ['Terms of service', 'Privacy policy', '404'],
-  Connect: ['Instagram', 'YouTube', 'LinkedIn', 'Twitter / X'],
-};
+import { StudAILogo, LinkedInIcon, XIcon, InstagramIcon } from './Icons';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0A0A0A] text-gray-400 py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-          <div className="col-span-2 md:col-span-2 pr-8">
-            <div className="flex items-center space-x-2 mb-4">
-              <StudAILogo className="h-6 w-auto text-white" />
-              <span className="font-space-grotesk font-bold text-lg text-white">Stud AI</span>
-            </div>
-            <p className="text-sm">Speed, scale, and smarts — deployed.</p>
-          </div>
-          
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h3 className="font-medium text-white mb-4">{title}</h3>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm hover:text-white transition-colors">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+    <footer className="bg-[#050505] text-gray-400 py-16 rounded-t-3xl">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        
+        <StudAILogo className="h-10 w-auto text-white" />
+
+        <p className="mt-6 text-lg text-gray-300 max-w-md">
+          Osmiq, where intelligence finds its flow.
+        </p>
+
+        <div className="mt-8">
+            <p className="text-gray-500">Contact us on X</p>
+            <a href="#" className="text-white hover:underline">@osmiq</a>
         </div>
-        <div className="mt-16 border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm">
-          <p>© {new Date().getFullYear()} Stud AI. All rights reserved</p>
-          <div className="flex items-center space-x-2 mt-4 sm:mt-0">
-            <p>by <a href="#" className="hover:text-white">Taksh & Keval</a></p>
-            <p>Made in <a href="#" className="hover:text-white">Us</a></p>
+        
+        <div className="w-full border-t border-gray-700 my-12"></div>
+        
+        <div className="w-full flex flex-col sm:flex-row justify-between items-center text-sm gap-4">
+          <div className="flex items-center text-gray-500">
+            <p>© {new Date().getFullYear()} Osmiq. All rights reserved</p>
+          </div>
+          <div className="flex items-center space-x-6">
+            <a href="#" className="hover:text-white transition-colors" aria-label="LinkedIn"><LinkedInIcon className="h-5 w-5" /></a>
+            <a href="#" className="hover:text-white transition-colors" aria-label="X"><XIcon className="h-5 w-5" /></a>
+            <a href="#" className="hover:text-white transition-colors" aria-label="Instagram"><InstagramIcon className="h-5 w-5" /></a>
           </div>
         </div>
       </div>
@@ -47,4 +35,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-   
