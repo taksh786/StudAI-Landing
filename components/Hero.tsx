@@ -49,10 +49,10 @@ const Hero: React.FC<HeroProps> = ({ onJoinWaitlistClick }) => {
           THE AI LAYER THAT BRINGS
         </div>
         <h1 className="font-space-grotesk text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-white animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-          clarity to complexity.
+          Clarity that moves you forward.
         </h1>
         <p className="mt-6 max-w-xl text-lg md:text-xl text-gray-400 font-light">
-          <Typewriter text="Study smarter. Automate assessments. Save educators time." />
+          <Typewriter text="Simplified with purpose, so teaching feels effortless and learning feels complete." />
         </p>
         <div className="mt-10">
           <button onClick={onJoinWaitlistClick} className="bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-gray-200 transition-colors w-48 text-center">
@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinWaitlistClick }) => {
           </button>
         </div>
         <div className="mt-24 flex flex-col items-center">
-          <p className="text-sm text-gray-500 mb-6">TRUSTED BY INDUSTRY LEADERS</p>
+          <p className="text-sm text-gray-500 mb-6">TRUSTED BY</p>
           <div className="flex items-center space-x-8 text-gray-500">
              <FieldLogo className="h-5 w-auto" />
              <OrbitcLogo className="h-6 w-auto" />
